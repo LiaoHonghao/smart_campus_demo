@@ -1,0 +1,61 @@
+---
+layout: ../layouts/Layout.astro
+title: Smart Campus - A Personnel Monitoring and Management System
+description: Simple project page template for your research paper, built with Astro and Tailwind CSS
+favicon: /favicon.svg
+thumbnail: /screenshot.png
+---
+
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
+import TwoColumns from "../components/TwoColumns.astro";
+import Video from "../components/Video.astro";
+import YouTubeVideo from "../components/YouTubeVideo.astro";
+import PDF from "../components/PDF.astro";
+import Figure from "../components/Figure.astro";
+import LaTeX from "../components/LaTeX.astro";
+import SmallCaps from "../components/SmallCaps.astro";
+import Splat from "../components/Splat.tsx"
+
+import CodeBlock from "../components/CodeBlock.astro";
+export const components = {pre: CodeBlock}
+
+import outside from "../assets/outside.mp4";
+import transformer from "../assets/transformer.webp";
+
+<Header
+  title={frontmatter.title}
+  authors={[
+    {
+      name: "Honghao Liao",
+      url: "https://github.com/LiaoHonghao",
+      institution: "VsisLab, Shandong University",
+      mail: "202214818@mail.sdu.edu.cn",
+      notes: [],
+    },
+  ]}
+  conference="Project Duration: 2021.09 - present"
+  />
+
+## Project Introduction
+
+In this project, we use human pose estimation algorithms and target detection algorithms to implement a people monitoring and management system for campus, including the main functions like **people motion recognition**, **intruder recognition**, and **abnormal situation recognition** (e.g., crowding, fighting, and climbing over walls). The system is deployed for use in campus surveillance systems.
+
+## Demonstration
+
+Due to the privacy problem and the limited permission, only some of the project's demos are shown here.
+
+### **Human Motion Recognition**
+
+<Figure caption="Detecting and recognizing student behavior in lessons.">
+  <YouTubeVideo videoId="ZkTuY68T9_c" />
+</Figure>
+
+### **Intruder Detection**
+
+<Figure caption="Detecting the presence of intruders in the cordoned-off area.">
+  <YouTubeVideo videoId="tOH7tT43lY0" />
+</Figure>
